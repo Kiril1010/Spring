@@ -1,0 +1,19 @@
+group 'Spring'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+// https://mvnrepository.com/artifact/org.springframework/spring-core
+    compile group: 'org.springframework', name: 'spring-core', version: '4.3.5.RELEASE'
+// https://mvnrepository.com/artifact/org.springframework/spring-context
+    compile group: 'org.springframework', name: 'spring-context', version: '4.3.5.RELEASE'
+//    compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '1.10.6.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--<bean name="fileReader" class="via_xml.FileReader" init-method="initMethod" scope="prototype">-->
+    <bean name="fileReader" class="via_xml.FileReader" init-method="initMethod" >
+        <constructor-arg value="Poem.txt"/>
+    </bean>
+
+    <!--<bean name="readerService" class="via_xml.ReaderService" init-method="initMethod"-->
+          <!--destroy-method="cleanUp">-->
+        <!--via constructor-->
+     <!--   <constructor-arg index="0" ref="fileReader" />
+        <constructor-arg index="1" value="Poem.txt"/>-->
+        <!--via setters-->
+        <!--<property name="fileReader" ref="fileReader"/>-->
+        <!--<property name="collections" ref="injectionCollection"/>-->
+    <!--</bean>-->
+
+    <!--Autowire by type-->
+    <bean name="readerService" class="via_xml.ReaderService" init-method="initMethod"
+          destroy-method="cleanUp" autowire="byType">
+          <!--destroy-method="cleanUp" autowire="byType" scope="prototype">-->
+    </bean>
+
+    <!--Autowire by name-->
+   <!-- <bean name="readerService" class="via_xml.ReaderService" init-method="initMethod"
+          destroy-method="cleanUp" autowire="byName">
+    </bean>-->
+
+    <!--Autowire by constructor-->
+   <!-- <bean name="readerService" class="via_xml.ReaderService" init-method="initMethod"
+          destroy-method="cleanUp" autowire="constructor">
+    </bean>-->
+
+    <bean name="injectionCollection" class="via_xml.InjectionCollections">
+        <property name="integerList">
+            <list>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </list>
+        </property>
+        <property name="integerSet">
+            <set>
+                <value>4</value>
+                <value>5</value>
+                <value>6</value>
+            </set>
+        </property>
+
+        <property name="integerMap">
+            <map>
+                <entry key="key1">
+                    <value>7</value>
+                </entry>
+                <entry key="key2">
+                    <value>8</value>
+                </entry>
+                <entry key="key3">
+                    <value>9</value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+</beans>
