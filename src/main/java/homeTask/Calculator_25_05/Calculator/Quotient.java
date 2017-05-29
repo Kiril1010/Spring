@@ -1,4 +1,4 @@
-package homeTask.Calculator_25_05;
+package homeTask.Calculator_25_05.Calculator;
 
 public class Quotient implements Calculation {
     int a, b;

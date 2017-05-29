@@ -9,7 +9,7 @@ public class TestResource {
         AbstractApplicationContext context = new AnnotationConfigApplicationContext(ManConfig.class);
 //        context.refresh();
 //        Man man = (Man) context.getBean("reallyMan");
-        Man man = (Man) context.getBean(Man.class);
+        Man man = context.getBean(Man.class);
         man.printCity();
     }
 }

@@ -8,7 +8,7 @@ import using_java.CompactDiscJava;
 @Component
 //@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 //@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-//@Scope("prototype")
+@Scope("prototype")
 public class SingletonSgtPeppersJava implements CompactDiscJava {
     private String title = "Sgt. Pepper's Lonely Hearts Club Band";
     private String artist = "The Beatles";

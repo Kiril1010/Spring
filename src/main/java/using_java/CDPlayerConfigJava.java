@@ -14,26 +14,27 @@ import using_java.try_scopes.SuperCDPlayerJava;
 //@ComponentScan(basePackages = "auto_wiring")
 //@ComponentScan(basePackageClasses = CompactDiscJava.class)
 public class CDPlayerConfigJava {
-/*    @Autowired
+   /* @Autowired
     private AnotherCDPlayerConfigJava anotherConfig;*/
 
-
-   /* @Bean(name = "HotPeppers")
+//    @Bean(name = "HotPeppers")
+    /*@Bean(name = "HotPeppers")
     public CompactDiscJava sgtPeppers() {
         return new SgtPeppersJava();
     }*/
 
-/*    @Bean (name = "MyPlayer")
+
+   /* @Bean (name = "MyPlayer")
     CDPlayerJava cdPlayerJava() {
         return new CDPlayerJava(sgtPeppers());
     }*/
 
-//    @Bean
-//    CDPlayerJava cdPlayerJava() {
-//        return new CDPlayerJava(anotherConfig.sgtPeppers());
-//    }
-/*also it works if CompactDiscJava annotated with Component*/
    /* @Bean
+    CDPlayerJava cdPlayerJava() {
+        return new CDPlayerJava(anotherConfig.sgtPeppers());
+    }*/
+/*also it works if CompactDiscJava annotated with Component*/
+    /*@Bean
     CDPlayerJava cdPlayerJava(CompactDiscJava compactDiscJava) {
         return new CDPlayerJava(compactDiscJava);
     }*/

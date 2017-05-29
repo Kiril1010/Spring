@@ -4,13 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class CDPlayerJava {
 
     private CompactDiscJava compactDiscJava;
 
-    @Autowired
-    public CDPlayerJava(@Qualifier("SgtPeppersJava")CompactDiscJava compactDisc) {
+/*    @Autowired */
+    public CDPlayerJava(@Qualifier(value = "SgtPeppersJava")CompactDiscJava compactDisc) {
+//    public CDPlayerJava(CompactDiscJava compactDisc) {
         this.compactDiscJava = compactDisc;
     }
 

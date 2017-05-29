@@ -35,11 +35,12 @@ public class TestTypesOfInjection {
         /*FileReader fileReader = (FileReader) context.getBean("fileReader");
         fileReader.read();*/
         ReaderService service = (ReaderService) context.getBean("readerService");
-        service.getFileReader().setFileName("AnotherFile");
+//        service.getFileReader().setFileName("AnotherFile");
+        service.printMap();
 
-        ReaderService service1 = (ReaderService) context.getBean("readerService");
-
-        System.out.println(service1.getFileReader().getFileName());
+//        ReaderService service1 = (ReaderService) context.getBean("readerService");
+//
+//        System.out.println(service1.getFileReader().getFileName());
 
         /*service.fetchData();
         service.printMap();*/

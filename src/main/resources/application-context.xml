@@ -13,18 +13,18 @@
     <!--<bean name="readerService" class="via_xml.ReaderService" init-method="initMethod"-->
           <!--destroy-method="cleanUp">-->
         <!--via constructor-->
-     <!--   <constructor-arg index="0" ref="fileReader" />
-        <constructor-arg index="1" value="Poem.txt"/>-->
+     <!--<constructor-arg index="0" ref="fileReader" />-->
+        <!--<constructor-arg index="1" value="Poem.txt"/>-->
         <!--via setters-->
         <!--<property name="fileReader" ref="fileReader"/>-->
         <!--<property name="collections" ref="injectionCollection"/>-->
     <!--</bean>-->
 
     <!--Autowire by type-->
-    <bean name="readerService" class="via_xml.ReaderService" init-method="initMethod"
-          destroy-method="cleanUp" autowire="byType">
+    <!--<bean name="readerService" class="via_xml.ReaderService" init-method="initMethod"-->
+          <!--destroy-method="cleanUp" autowire="byType">-->
           <!--destroy-method="cleanUp" autowire="byType" scope="prototype">-->
-    </bean>
+    <!--</bean>-->
 
     <!--Autowire by name-->
    <!-- <bean name="readerService" class="via_xml.ReaderService" init-method="initMethod"

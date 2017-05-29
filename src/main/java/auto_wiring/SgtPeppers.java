@@ -22,7 +22,7 @@ public class SgtPeppers implements CompactDisc {
 //@Component("SgtPeppersNew")
 @Component
 class SgtPeppersNew implements CompactDisc {
-    private String title = "Sgt. Pepper's Lonely Hearts Club Band -New";
+    private String title = "Sgt. Pepper's Lonely Hearts Club Band - New";
     private String artist = "The Beatles - New";
 
 

@@ -1,10 +1,12 @@
 package using_java;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
-@Component
-//@Component("SgtPeppersJava")
+//@Component
+@Component("SgtPeppersJava")
+//@Qualifier("sgtPeppersJava")
 public class SgtPeppersJava implements CompactDiscJava {
     private String title = "Sgt. Pepper's Lonely Hearts Club Band";
     private String artist = "The Beatles";
