@@ -1,9 +1,9 @@
-package homeTask.Calculator_25_05;
+package homeTask.Calculator_25_05.Calculator;
 
-public class Quotient implements Calculation {
+public class Subtraction implements Calculation {
     int a, b;
 
-    public Quotient(int a, int b) {
+    public Subtraction(int a, int b) {
         this.a = a;
         this.b = b;
     }
@@ -25,6 +25,7 @@ public class Quotient implements Calculation {
     }
 
     public int calculate() {
-        return a % b;
+        System.out.println(a - b);
+        return a - b;
     }
 }

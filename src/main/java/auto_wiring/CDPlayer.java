@@ -15,7 +15,7 @@ public class CDPlayer {
     }
 
     @Autowired
-//    @Qualifier("SgtPeppersNew")
+//    @Qualifier("sgtPeppersNew")
     public void setCompactDisc(CompactDisc compactDisc) {
         this.compactDisc = compactDisc;
     }

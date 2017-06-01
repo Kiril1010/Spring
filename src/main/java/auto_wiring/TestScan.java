@@ -10,12 +10,12 @@ public class TestScan {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
         ctx.register(CDPlayerConfig.class);
         ctx.refresh();
-        /*CDPlayer cdPlayer = ctx.getBean(CDPlayer.class);
+        /*CDPlayerKirill cdPlayer = ctx.getBean(CDPlayerKirill.class);
         cdPlayer.turnOnMusic();*/
         SgtPeppersNew sgtPeppersNew = (SgtPeppersNew) ctx.getBean("sgtPeppersNew");
         sgtPeppersNew.play();
       /*  ApplicationContext context = new ClassPathXmlApplicationContext("annotation-context.xml");
-        CDPlayer cdPlayer = context.getBean(CDPlayer.class);
+        CDPlayerKirill cdPlayer = context.getBean(CDPlayerKirill.class);
         cdPlayer.turnOnMusic();*/
     }
 }

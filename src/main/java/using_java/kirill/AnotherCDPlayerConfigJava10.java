@@ -1,17 +1,16 @@
-package using_java;
+package using_java.kirill;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 //@ComponentScan(basePackages = "auto_wiring")
 //@ComponentScan(basePackageClasses = CompactDiscJava10.class)
-public class AnotherCDPlayerConfigJava {
+public class AnotherCDPlayerConfigJava10 {
 
     @Bean()
-    public SgtPeppersJava sgtPeppers() {
-        return new SgtPeppersJava();
+    public SgtPeppersJava10 sgtPeppers() {
+        return new SgtPeppersJava10();
     }
 
 }

@@ -1,9 +1,9 @@
-package homeTask.Calculator_25_05;
+package HomeTask.Calculator.Using_java;
 
-public class Multiplication implements Calculation {
+public class AdditionJava implements CalculationJava {
     int a, b;
 
-    public Multiplication(int a, int b) {
+    public AdditionJava(int a, int b) {
         this.a = a;
         this.b = b;
     }
@@ -25,7 +25,7 @@ public class Multiplication implements Calculation {
     }
 
     public int calculate() {
-        System.out.println(a * b);
-        return a * b;
+        System.out.println(a + b);
+        return a + b;
     }
 }

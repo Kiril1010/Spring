@@ -8,9 +8,9 @@ import using_java.CompactDiscJava;
  * Created by andrey on 27.01.17.
  */
 @Configuration
-@ComponentScan
-//@ComponentScan(basePackages = "auto_wiring")
-//@ComponentScan(basePackageClasses = CompactDisc.class)
+//@ComponentScan
+@ComponentScan(basePackages = "auto_wiring")
+//@ComponentScan(basePackageClasses = CompactDiscKirill.class)
 public class CDPlayerConfig {
 
 }

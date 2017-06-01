@@ -1,10 +1,10 @@
-package using_java.try_resource;
+package auto_wiring_kirill;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-//@ComponentScan
-@ComponentScan(basePackages = "using_java.try_resource")
-public class ManConfig {
+@ComponentScan
+//@ComponentScan(basePackages = "auto_wiring_kirill")
+public class CDPlayerConfigKirill {
 }

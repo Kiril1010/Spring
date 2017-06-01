@@ -1,9 +1,9 @@
-package homeTask.Calculator_25_05;
+package HomeTask.Calculator.Using_java;
 
-public class Subtraction implements Calculation {
+public class SubtractionJava implements CalculationJava {
     int a, b;
 
-    public Subtraction(int a, int b) {
+    public SubtractionJava(int a, int b) {
         this.a = a;
         this.b = b;
     }

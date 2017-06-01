@@ -1,15 +1,11 @@
-package using_java.try_scopes;
+package using_java.kirill;
 
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-import using_java.CompactDiscJava;
 
-@Component
-//@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
-@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-//@Scope("prototype")
-public class SingletonSgtPeppersJava implements CompactDiscJava {
+//@Component
+@Component("SgtPeppersJava10")
+//@Qualifier("sgtPeppersJava")
+public class SgtPeppersJava10 implements CompactDiscJava10 {
     private String title = "Sgt. Pepper's Lonely Hearts Club Band";
     private String artist = "The Beatles";
 
