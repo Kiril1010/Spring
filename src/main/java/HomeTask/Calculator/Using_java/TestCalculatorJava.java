@@ -1,17 +1,16 @@
-package homeTask.Calculator_25_05.Calculator;
+package HomeTask.Calculator.Using_java;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class TestCalculator {
+public class TestCalculatorJava {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("kirill-context.xml");
-        CalculatorService service = (CalculatorService) context.getBean("calculateService");
+        CalculatorServiceJava service = (CalculatorServiceJava) context.getBean("calculateService");
         service.getAddition();
         service.getSubtraction();
         service.getMultiplication();
         service.getDivision();
         service.getQuotient();
-        service.getListOfNumbers();
     }
 }

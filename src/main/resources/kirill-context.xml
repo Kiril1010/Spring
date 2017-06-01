@@ -8,22 +8,27 @@
            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
     <context:component-scan base-package="auto_wiring"/>
 
-    <bean name="addition" class="homeTask.Calculator_25_05.Calculator.Addition">
+    <bean name="additionJava" class="homeTask.Calculator_25_05.Calculator.Addition">
         <constructor-arg index="0" value="15"/>
         <constructor-arg index="1" value="10"/>
     </bean>
 
-    <bean name="subtraction" class="homeTask.Calculator_25_05.Calculator.Subtraction">
+    <bean name="subtractionJava" class="homeTask.Calculator_25_05.Calculator.Subtraction">
         <constructor-arg index="0" value="55"/>
         <constructor-arg index="1" value="33"/>
     </bean>
 
-    <bean name="multiplication" class="homeTask.Calculator_25_05.Calculator.Multiplication">
+    <bean name="multiplicationJava" class="homeTask.Calculator_25_05.Calculator.Multiplication">
         <constructor-arg index="0" value="10"/>
         <constructor-arg index="1" value="5"/>
     </bean>
 
-    <bean name="divison" class="homeTask.Calculator_25_05.Calculator.Division">
+    <bean name="divisonJava" class="homeTask.Calculator_25_05.Calculator.Division">
+        <constructor-arg index="0" value="20"/>
+        <constructor-arg index="1" value="5"/>
+    </bean>
+
+    <bean name="quotientJava" class="homeTask.Calculator_25_05.Calculator.Quotient">
         <constructor-arg index="0" value="20"/>
         <constructor-arg index="1" value="5"/>
     </bean>
@@ -51,17 +56,32 @@
         </property>
     </bean>
 
-    <!--1) using autowire-->
-    <bean name="calculateService" class="homeTask.Calculator_25_05.Calculator.CalculatorService"
-          autowire="byType">
-    </bean>
-
-   <!--2) using constructor - не получилось сделать!!!!!!-->
-<!--    <bean name="calculateService" class="homeTask.Calculator_25_05.Calculator.CalculatorService">
-        &lt;!&ndash;via constructor&ndash;&gt;
-        <constructor-arg index="0" ref="injectionCollectionCalculator"/>
-        <constructor-arg index="1" ref="addition"/>
+   <!-- <bean name="injectionCollectionCalculator" class="homeTask.Calculator_25_05.Calculator.InjectionCollectionCalculator">
+        <property name="integerListKirill">
+            <list>
+                    <value>additionJava</value>
+                    <value>subtractionJava</value>
+                    <value>multiplicationJava</value>
+                    <value>divisonJava</value>
+                    <value>quotientJava</value>
+            </list>
+        </property>
     </bean>-->
+
+    <!--1) using autowire-->
+ <!--   <bean name="calculateService" class="homeTask.Calculator_25_05.Calculator.CalculatorService"
+          autowire="byType">
+    </bean>-->
+
+   <!--2) using constructor-->
+<bean name="calculateService" class="homeTask.Calculator_25_05.Calculator.CalculatorService">
+        <constructor-arg index="0" ref="injectionCollectionCalculator"/>
+        <constructor-arg index="1" ref="additionJava"/>
+        <constructor-arg index="2" ref="subtractionJava"/>
+        <constructor-arg index="3" ref="multiplicationJava"/>
+        <constructor-arg index="4" ref="divisonJava"/>
+        <constructor-arg index="5" ref="quotientJava"/>
+  </bean>
 
 </beans>
 

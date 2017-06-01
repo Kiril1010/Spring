@@ -10,13 +10,13 @@ public class CDPlayerJava {
     private CompactDiscJava compactDiscJava;
 
 /*    @Autowired */
-    public CDPlayerJava(@Qualifier(value = "SgtPeppersJava")CompactDiscJava compactDisc) {
-//    public CDPlayerJava(CompactDiscJava compactDisc) {
+    public CDPlayerJava(@Qualifier(value = "SgtPeppersJava10")CompactDiscJava compactDisc) {
+//    public CDPlayerJava10(CompactDiscJava10 compactDisc) {
         this.compactDiscJava = compactDisc;
     }
 
    /* @Autowired
-    public void setCompactDiscJava(@Qualifier("sgtPeppersJava") CompactDiscJava compactDiscJava) {
+    public void setCompactDiscJava(@Qualifier("sgtPeppersJava") CompactDiscJava10 compactDiscJava) {
         this.compactDiscJava = compactDiscJava;
     }*/
 

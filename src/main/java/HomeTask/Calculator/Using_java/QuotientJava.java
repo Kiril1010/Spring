@@ -1,9 +1,9 @@
-package homeTask.Calculator_25_05.Calculator;
+package HomeTask.Calculator.Using_java;
 
-public class Quotient implements Calculation {
+public class QuotientJava implements CalculationJava {
     int a, b;
 
-    public Quotient(int a, int b) {
+    public QuotientJava(int a, int b) {
         this.a = a;
         this.b = b;
     }
